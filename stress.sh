@@ -30,12 +30,12 @@ while true; do
     ./main < input.txt > output.txt
 
     # Compare the outputs of brute and optimized solutions
-    if ! diff -q dummy.txt output.txt > /dev/null; then
+    if ! diff -q -I '^$' dummy.txt output.txt > /dev/null; then
         echo "Test case failed on iteration $i"
         echo "Input: $(cat input.txt)"
         echo "Brute output: $(cat dummy.txt)"
         echo "Optimized output: $(cat output.txt)"
-        exit 1
+        return 1
     fi
 
     # Print a message for each passed test case

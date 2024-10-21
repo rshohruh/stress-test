@@ -2,10 +2,11 @@
 
 using namespace std;
 
-mt19937 rng(chrono::steady_clock::now().time_since_epoch().count()); // for generate numbers
 
 int main(int argc, char* argv[]) {
     int seed = atoi(argv[0]);
+    mt19937 rng(seed);
 
+    // cout << rng() % 10000000 + 1;
     // cout << rng();
 }
