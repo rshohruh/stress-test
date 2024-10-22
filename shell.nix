@@ -74,6 +74,6 @@ pkgs.mkShell {
         echo "All test cases passed successfully!"
     }
 
-    export -f run
+    export -f run stress
   '';
 }
