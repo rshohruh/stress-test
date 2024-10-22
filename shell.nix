@@ -6,7 +6,7 @@ pkgs.mkShell {
   name = "cpp-dev-shell";
 
   # Tools you need for C++ development
-  nativeBuildInputs = with pkgs; [
+  buildInputs = with pkgs; [
     gcc
     clang-tools
     nixd
