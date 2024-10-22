@@ -8,6 +8,8 @@ pkgs.mkShell {
   # Tools you need for C++ development
   nativeBuildInputs = with pkgs; [
     gcc
+    clang-tools
+    nixd
   ];
 
   shellHook = ''
