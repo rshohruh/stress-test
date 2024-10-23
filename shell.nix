@@ -7,7 +7,6 @@ pkgs.mkShell {
     pkgs.just       # Task runner for automating tasks
     pkgs.valgrind   # Memory error detector, useful for stress testing
     pkgs.gdb        # Debugger
-    pkgs.perf       # For performance profiling
   ];
 
   shellHook = ''
