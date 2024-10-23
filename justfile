@@ -1,18 +1,19 @@
 # Run the stress test script
 stress-test:
-    chmod +x stress.sh
-    ./stress.sh
-    rm brute
-    rm gen
-    rm main
+    chmod +x src/stress.sh
+    ./src/stress.sh
+    rm src/brute
+    rm src/gen
+    rm src/main
 
 # Compile and run the program
 run name:
-    g++ -o {{name}} -DLOCAL {{name}}.cpp
-    ./{{name}} < input.txt > output.txt 2> error.txt
-    rm {{name}}
+    g++ -o src/{{name}} -DLOCAL src/{{name}}.cpp
+    ./src/{{name}} < src/input.txt > src/output.txt 2> src/error.txt
+    rm src/{{name}}
 
 # Generate new problem based on template.cpp
 new name:
-    cp template.cpp {{name}}.cpp
-    echo "Created new problem: {{name}}.cpp"
+    cp src/template.cpp src/{{name}}.cpp
+    echo "Created new problem: src/{{name}}.cpp"
+    code src/{{name}}.cpp
