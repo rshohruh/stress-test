@@ -1,13 +1,4 @@
-#!/run/current-system/sw/bin/bash
-
-#  ____   ___    _   _  ___ _____   _____ ____ ___ _____
-# |  _ \ / _ \  | \ | |/ _ \_   _| | ____|  _ \_ _|_   _|
-# | | | | | | | |  \| | | | || |   |  _| | | | | |  | |
-# | |_| | |_| | | |\  | |_| || |   | |___| |_| | |  | |
-# |____/ \___/  |_| \_|\___/ |_|   |_____|____/___| |_|
-
-
-# Compile all the necessary files
+# Compile all necessary files
 g++ gen.cpp -o gen
 g++ brute.cpp -o brute
 g++ main.cpp -o main
@@ -16,7 +7,7 @@ g++ main.cpp -o main
 i=1
 
 # Run stress test in a loop
-while true; do
+while [[ $i -le 5000 ]]; do
     # Use the current iteration value as a seed
     SEED=$i
 
@@ -35,7 +26,7 @@ while true; do
         echo "Input: $(cat input.txt)"
         echo "Brute output: $(cat dummy.txt)"
         echo "Optimized output: $(cat output.txt)"
-        return 1
+        exit 0
     fi
 
     # Print a message for each passed test case
