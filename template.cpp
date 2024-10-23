@@ -4,7 +4,7 @@
 #include <bits/stdc++.h>
 
 #ifndef ONLINE_JUDGE
-    #include "/home/rshohruh/debug.hpp"
+    #include "debug.hpp"
 #else
     #define debug(...) 42
 #endif

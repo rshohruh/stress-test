@@ -1,5 +1,6 @@
 # Run the stress test script
 stress-test:
+    chmod +x stress.sh
     ./stress.sh
     rm brute
     rm gen
