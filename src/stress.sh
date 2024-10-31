@@ -12,20 +12,20 @@ while [[ $i -le 5000 ]]; do
     SEED=$i
 
     # Generate a test case with the current seed and save it to input.txt
-    ./gen $SEED > input.txt
+    ./gen $SEED > src/input.txt
 
     # Run the brute-force solution and save output to dummy.txt
-    ./brute < input.txt > dummy.txt
+    ./brute < src/input.txt > src/dummy.txt
 
     # Run the optimized solution and save output to output.txt
-    ./main < input.txt > output.txt
+    ./main < src/input.txt > src/output.txt
 
     # Compare the outputs of brute and optimized solutions
-    if ! diff -q -I '^$' dummy.txt output.txt > /dev/null; then
+    if ! diff -q -I '^$' src/dummy.txt src/output.txt > /dev/null; then
         echo "Test case failed on iteration $i"
-        echo "Input: $(cat input.txt)"
-        echo "Brute output: $(cat dummy.txt)"
-        echo "Optimized output: $(cat output.txt)"
+        echo "Input: $(cat src/input.txt)"
+        echo "Brute output: $(cat src/dummy.txt)"
+        echo "Optimized output: $(cat src/output.txt)"
         exit 0
     fi
 
