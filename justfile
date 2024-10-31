@@ -2,9 +2,9 @@
 stress-test:
     chmod +x src/stress.sh
     ./src/stress.sh
-    rm src/brute
-    rm src/gen
-    rm src/main
+    rm brute
+    rm gen
+    rm main
 
 # Compile and run the program
 run name:
