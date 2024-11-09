@@ -3,13 +3,13 @@
 #pragma GCC optimize("Ofast")
 #include <bits/stdc++.h>
 
-#ifndef ONLINE_JUDGE
+#ifdef LOCAL
     #include "debug.hpp"
 #else
     #define debug(...) 42
 #endif
 using namespace std;
-using ll = long long;
+#define int long long
 
 // #define with_testcases
 void t_main(){
