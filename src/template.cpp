@@ -9,7 +9,7 @@
     #define debug(...) 42
 #endif
 using namespace std;
-#define int long long
+#define ll long long
 
 // #define with_testcases
 void t_main(){

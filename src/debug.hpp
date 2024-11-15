@@ -49,9 +49,6 @@ inline void print(const Container &c) {
     std::cerr << '}';
 }
 
-// Base case function for variadic template (when no arguments remain)
-inline void printEnd() { std::cerr << "]\n"; }
-
 
 // Base case for variadic template recursion (no arguments)
 inline void printMultiple() { }  // Empty base case function
@@ -65,6 +62,6 @@ inline void printMultiple(T first, Args... rest) {
 }
 
 // Debug macro for printing variable names and values
-#define debug(args...) std::cerr << "[" << #args << "] = ["; printMultiple(args); printEnd();
+#define debug(args...) std::cerr << "[" << #args << "] = ["; printMultiple(args); std::cerr << "]\n";
 
 #endif // DEBUG_HPP
